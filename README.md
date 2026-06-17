@@ -153,3 +153,4 @@ marketly/
 ## Academic Note
 
 This project was developed as a summative assessment for the ITECA3-12 module at Eduvos.
+AI was used to assist with comments
