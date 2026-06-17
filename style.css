@@ -1,0 +1,1413 @@
+/* ============================================================
+   MARKETLY - Global Stylesheet
+   Theme: Teal-grey accents on light cyan, with black banners
+   ============================================================ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ── COLOR VARIABLES ─────────────────────── */
+:root {
+    --color-primary: #4F7C82;       /* Teal-grey — main accent */
+    --color-primary-dark: #0B2E33;  /* Very dark teal — hover states */
+    --color-secondary: #000000;     /* Black — banners, sell button */
+    --color-success: #166534;       /* Green — kept for success messages */
+    --color-error: #991b1b;         /* Red — kept for error messages */
+    --color-text: #0B2E33;          /* Very dark teal — body text */
+    --color-light: #B8E3E9;         /* Light cyan — page edges/gradient */
+    --color-bg: #ffffff;            /* White — form/card backgrounds */
+    --color-border: #93B1B5;        /* Muted blue-grey — input borders */
+    --color-shadow: rgba(11, 46, 51, 0.15);  /* Shadow tinted to match palette */
+}
+
+/* ── BODY & BASE ─────────────────────────── */
+body {
+    font-family: Arial, sans-serif;
+    background: var(--color-light);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+/* ── FORMS ──────────────────────────────── */
+.form-container {
+    width: 100%;
+    max-width: 520px;
+    background: var(--color-bg);
+    border-radius: 10px;
+    padding: 28px;
+    box-shadow: 0 10px 28px var(--color-shadow);
+    margin: 0 auto;
+}
+
+.form-container h2 {
+    color: var(--color-text);
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 14px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+    color: #555;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="number"],
+input[type="file"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    background: #f8fafc;
+    color: var(--color-text);
+    font-family: Arial, sans-serif;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 4px rgba(79, 124, 130, 0.3);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+    padding: 12px;
+    background: var(--color-primary);
+    color: #ffffff;
+    font-size: 0.95rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    background: var(--color-primary-dark);
+}
+
+/* ── LINKS ──────────────────────────────── */
+.switch-link {
+    margin-top: 14px;
+    text-align: center;
+    color: #475569;
+    font-size: 0.9rem;
+}
+
+.switch-link a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.switch-link a:hover {
+    text-decoration: underline;
+}
+
+/* ── ALERTS & NOTIFICATIONS ─────────────── */
+.error {
+    margin-bottom: 16px;
+    color: #b91c1c;
+    background: #fee2e2;
+    border: 1px solid #fecaca;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+}
+
+.success {
+    margin-bottom: 16px;
+    color: #065f46;
+    background: #dcfce7;
+    border: 1px solid #bbf7d0;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+}
+
+/* ── LAYOUT ─────────────────────────────── */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 16px;
+    background: linear-gradient(135deg, #B8E3E9, #93B1B5);
+}
+
+/* ── OPTION PAGE (option.php) ───────────── */
+.option-card {
+    width: 100%;
+    max-width: 540px;
+    background: var(--color-bg);
+    border-radius: 10px;
+    box-shadow: 0 8px 24px var(--color-shadow);
+    padding: 32px;
+    text-align: center;
+}
+
+.option-card h1 {
+    font-size: 1.7rem;
+    margin-bottom: 8px;
+    color: var(--color-text);
+}
+
+.option-card p {
+    color: #666;
+    margin-bottom: 24px;
+}
+
+.button-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.choice-btn {
+    flex: 1;
+    min-width: 180px;
+    border: none;
+    border-radius: 6px;
+    padding: 14px 18px;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.choice-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.95;
+}
+
+.buy-btn   { background: var(--color-primary); }
+.sell-btn  { background: var(--color-secondary); }
+.admin-btn { background: var(--color-primary-dark); }
+.profile-btn { background: var(--color-primary); }
+.orders-btn { background: var(--color-primary-dark); }
+
+.logout-wrap {
+    margin-top: 24px;
+}
+
+.logout-btn {
+    width: 100%;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    padding: 10px 14px;
+    background: var(--color-bg);
+    color: #334155;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.logout-btn:hover {
+    background: #f8fafc;
+}
+
+/* On phones, stack the buttons vertically. */
+@media (max-width: 480px) {
+    .button-row {
+        flex-direction: column;
+    }
+    .choice-btn {
+        min-width: auto;
+    }
+}
+
+/* ── SELLING PAGE (selling.php) ─────────── */
+.selling-container {
+    max-width: 600px;
+}
+
+.price-row {
+    display: flex;
+    gap: 12px;
+}
+
+.price-row .form-group {
+    flex: 1;
+}
+
+.hint {
+    font-weight: normal;
+    color: #777;
+    font-size: 0.85rem;
+}
+
+.selling-container input[type="file"] {
+    margin-bottom: 8px;
+    padding: 6px;
+    background: #ffffff;
+}
+
+@media (max-width: 480px) {
+    .price-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* ── MARKETPLACE PAGE (buying.php) ─────── */
+.market-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--color-secondary);
+    color: #ffffff;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    height: 62px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.brand img {
+    height: 44px;
+    width: auto;
+    display: block;
+}
+
+.search-bar {
+    display: flex;
+    flex: 1;
+    max-width: 640px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 9px 14px;
+    border: none;
+    border-radius: 6px 0 0 6px;
+    font-size: 0.95rem;
+    outline: none;
+    background: #f9fafb;
+    color: var(--color-text);
+}
+
+.search-bar button {
+    padding: 9px 14px;
+    background: var(--color-primary);
+    color: #ffffff;
+    border: none;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.search-bar button:hover {
+    background: var(--color-primary-dark);
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+.profile-wrap {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #e2e8f0;
+    font-size: 0.9rem;
+}
+
+.profile-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    display: grid;
+    place-items: center;
+    font-weight: bold;
+    color: #ffffff;
+    flex-shrink: 0;
+}
+
+.header-btn {
+    border: 1px solid #4b5563;
+    border-radius: 6px;
+    padding: 7px 12px;
+    background: transparent;
+    color: #e2e8f0;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.header-btn:hover {
+    background: #374151;
+}
+
+.page-body {
+    display: flex;
+    min-height: calc(100vh - 62px);
+}
+
+.sidebar {
+    width: 210px;
+    flex-shrink: 0;
+    background: #ffffff;
+    padding: 18px 12px;
+    border-right: 1px solid #e5e7eb;
+}
+
+.sidebar h3 {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #9ca3af;
+    margin-bottom: 8px;
+    padding-left: 4px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li button {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-size: 0.88rem;
+    color: #374151;
+    cursor: pointer;
+}
+
+.sidebar ul li button:hover,
+.sidebar ul li button.active {
+    background: #f0fdf4;
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+.market-main {
+    flex: 1;
+    padding: 20px;
+}
+
+.results-bar {
+    font-size: 0.88rem;
+    color: #6b7280;
+    margin-bottom: 14px;
+}
+
+.market-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+.market-card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.market-card:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.13);
+    transform: translateY(-2px);
+}
+
+.market-card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    background: #f3f4f6;
+}
+
+.market-card-body {
+    padding: 12px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.market-card-title {
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: var(--color-text);
+    min-height: 2.5em;
+}
+
+.market-card-desc {
+    font-size: 0.82rem;
+    color: #6b7280;
+    line-height: 1.3;
+    min-height: 44px;
+    overflow: hidden;
+}
+
+.market-card-meta {
+    font-size: 0.78rem;
+    color: #9ca3af;
+}
+
+.market-card-price {
+    font-size: 1.05rem;
+    font-weight: bold;
+    color: var(--color-primary);
+    margin-top: 4px;
+}
+
+.market-card-buy {
+    margin-top: 8px;
+    border: none;
+    border-radius: 6px;
+    padding: 9px;
+    background: var(--color-secondary);
+    color: #ffffff;
+    font-size: 0.88rem;
+    cursor: pointer;
+    width: 100%;
+}
+
+.market-card-buy:hover {
+    background: var(--color-primary-dark);
+}
+
+.no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #9ca3af;
+    padding: 50px 0;
+}
+
+@media (max-width: 640px) {
+    .sidebar {
+        display: none;
+    }
+    .brand img {
+        height: 36px;
+    }
+}
+
+/* ── PROFILE PAGE (profile.php) ─────────── */
+.profile-card {
+    width: 100%;
+    max-width: 560px;
+    background: var(--color-bg);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px var(--color-shadow);
+    padding: 32px;
+    margin: 0 auto;
+}
+
+.profile-card h1 {
+    font-size: 1.7rem;
+    color: var(--color-text);
+    margin-bottom: 4px;
+}
+
+.profile-subtitle {
+    color: #6b7280;
+    margin-bottom: 22px;
+    font-size: 0.95rem;
+}
+
+.profile-actions {
+    margin-top: 24px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.profile-actions .btn {
+    flex: 1;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* ── MY ORDERS PAGE (myOrders.php) ──────── */
+.orders-card {
+    width: 100%;
+    max-width: 800px;
+    background: var(--color-bg);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px var(--color-shadow);
+    padding: 32px;
+    margin: 0 auto;
+}
+
+.orders-card h1 {
+    font-size: 1.7rem;
+    color: var(--color-text);
+    margin-bottom: 4px;
+}
+
+.orders-subtitle {
+    color: #6b7280;
+    margin-bottom: 22px;
+    font-size: 0.95rem;
+}
+
+.orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.order-card {
+    display: grid;
+    grid-template-columns: 90px 1fr auto;
+    gap: 16px;
+    align-items: center;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 14px;
+}
+
+.order-image {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 8px;
+    background: #e5e7eb;
+}
+
+.order-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;  /* lets long titles wrap inside grid */
+}
+
+.order-product {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.order-meta {
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
+.order-amount {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-top: 4px;
+}
+
+.order-rating {
+    text-align: right;
+    min-width: 140px;
+}
+
+.rating-label {
+    font-size: 0.8rem;
+    color: #6b7280;
+    margin-bottom: 4px;
+}
+
+.rating-comment {
+    margin-top: 6px;
+    font-size: 0.82rem;
+    color: #475569;
+    font-style: italic;
+    max-width: 200px;
+}
+
+.rate-btn {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.orders-back {
+    margin-top: 16px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.orders-back .btn {
+    text-decoration: none;
+}
+
+/* On phones, stack everything vertically inside an order card. */
+@media (max-width: 600px) {
+    .order-card {
+        grid-template-columns: 1fr;
+        text-align: left;
+    }
+    .order-image {
+        width: 100%;
+        height: 180px;
+    }
+    .order-rating {
+        text-align: left;
+        min-width: 0;
+    }
+    .rating-comment {
+        max-width: none;
+    }
+}
+
+/* ── VIEW PRODUCT PAGE (viewProduct.php) ─ */
+.view-product-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px 16px;
+    width: 100%;
+}
+
+.view-product-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px var(--color-shadow);
+    padding: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: start;
+    justify-content: center;
+}
+
+.view-product-images {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.main-image {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    background: #f3f4f6;
+    border: 1px solid #e5e7eb;
+    display: block;
+}
+
+.photo-selector {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.photo-btn {
+    border: 1px solid var(--color-border);
+    background: #ffffff;
+    color: #334155;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.photo-btn:hover {
+    background: #f8fafc;
+    border-color: var(--color-primary);
+}
+
+.photo-btn.active {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: #ffffff;
+}
+
+.view-product-details h1 {
+    font-size: 1.55rem;
+    color: var(--color-text);
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.view-product-price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--color-primary);
+    margin-bottom: 18px;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 0.95rem;
+}
+
+.detail-label {
+    color: #6b7280;
+    font-weight: 600;
+}
+
+.detail-value {
+    color: var(--color-text);
+    text-align: right;
+}
+
+.view-product-description {
+    color: #374151;
+    line-height: 1.6;
+    margin-bottom: 22px;
+    white-space: pre-wrap;
+}
+
+.buy-now-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+@media (max-width: 800px) {
+    .view-product-card {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .main-image {
+        width: 100%;
+        max-width: 400px;
+        height: 320px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-image {
+        height: 240px;
+    }
+    .view-product-details h1 {
+        font-size: 1.3rem;
+    }
+    .view-product-price {
+        font-size: 1.5rem;
+    }
+}
+
+/* ── CHECKOUT PAGE (buyerInfo.php) ─────── */
+.checkout-card {
+    width: 100%;
+    max-width: 680px;
+    background: var(--color-bg);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 28px;
+    margin: 0 auto;
+}
+
+.checkout-card h1 {
+    font-size: 1.7rem;
+    margin-bottom: 8px;
+    color: var(--color-text);
+}
+
+.checkout-card > p {
+    color: #6b7280;
+    margin-bottom: 22px;
+}
+
+.section-title {
+    margin: 22px 0 12px;
+    font-size: 1.05rem;
+    color: #111827;
+}
+
+.summary-box {
+    background: #f8fafc;
+    border: 1px solid #dbe5ef;
+    border-radius: 10px;
+    padding: 14px;
+    margin-bottom: 16px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 0;
+    font-size: 0.94rem;
+    color: #334155;
+}
+
+.summary-row.total {
+    border-top: 1px solid #dbe5ef;
+    margin-top: 6px;
+    padding-top: 10px;
+    font-weight: bold;
+    color: #0f172a;
+}
+
+.btn {
+    border: none;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.96rem;
+    cursor: pointer;
+    transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.btn:hover {
+    opacity: 0.95;
+    transform: translateY(-1px);
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: #ffffff;
+    flex: 1;
+}
+
+.btn-secondary {
+    background-color: var(--color-secondary);
+    color: #ffffff;
+}
+
+/* ── SUCCESS PAGE (purchaseSuccess.php) ── */
+.success-card {
+    width: 100%;
+    max-width: 560px;
+    background: var(--color-bg);
+    border-radius: 14px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    padding: 32px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.tick {
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    margin: 0 auto 18px;
+    display: grid;
+    place-items: center;
+    background-color: var(--color-primary);
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.success-card h1 {
+    color: var(--color-primary-dark);
+    margin-bottom: 8px;
+    font-size: 1.8rem;
+}
+
+.success-card p {
+    color: #475569;
+    margin-bottom: 8px;
+    line-height: 1.45;
+}
+
+.order-id {
+    margin-top: 8px;
+    color: var(--color-text);
+    font-weight: bold;
+}
+
+.summary-title {
+    font-size: 1rem;
+    color: var(--color-text);
+    margin-bottom: 8px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.success-card .summary-box {
+    margin-top: 18px;
+    text-align: left;
+}
+
+.actions {
+    margin-top: 24px;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.actions .btn {
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* ── ADMIN DASHBOARD (adminDash.php) ───── */
+.admin-page {
+    min-height: 100vh;
+    padding: 24px;
+    background: linear-gradient(135deg, #B8E3E9, #93B1B5);
+}
+
+.admin-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 20px 24px;
+    box-shadow: 0 18px 36px var(--color-shadow);
+    margin-bottom: 24px;
+}
+
+.admin-title h1 {
+    font-size: 1.65rem;
+    margin: 0;
+    color: var(--color-text);
+}
+
+.admin-title p {
+    margin: 4px 0 0;
+    color: #475569;
+    font-size: 0.97rem;
+}
+
+.header-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.small-badge {
+    display: inline-flex;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: #ecfeff;
+    color: var(--color-primary);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.logout-action {
+    border: 1px solid var(--color-border);
+    background: #ffffff;
+    color: #334155;
+    border-radius: 12px;
+    padding: 10px 16px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.logout-action:hover {
+    background: #f8fafc;
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+.summary-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 22px;
+    box-shadow: 0 14px 30px var(--color-shadow);
+    border: 1px solid #e2e8f0;
+}
+
+.summary-card h2 {
+    font-size: 0.92rem;
+    margin-bottom: 12px;
+    color: #475569;
+}
+
+.summary-card strong {
+    display: block;
+    font-size: 2rem;
+    color: var(--color-primary-dark);
+}
+
+.panel {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 22px;
+    box-shadow: 0 18px 36px var(--color-shadow);
+    border: 1px solid #e2e8f0;
+    margin-bottom: 24px;
+}
+
+.panel h2 {
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+    color: var(--color-text);
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.panel-header h2 {
+    margin: 0;
+}
+
+.action-add {
+    background: var(--color-primary);
+    color: #ffffff;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.action-add:hover {
+    background: var(--color-primary-dark);
+}
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+.panel table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 720px;
+}
+
+.panel th,
+.panel td {
+    text-align: left;
+    padding: 14px 16px;
+    border-bottom: 1px solid #e2e8f0;
+    color: #334155;
+}
+
+.panel th {
+    font-weight: 700;
+    background: #f8fafc;
+}
+
+.empty-state {
+    padding: 22px;
+    color: #64748b;
+    text-align: center;
+}
+
+.row-actions {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.row-actions form {
+    margin: 0;
+}
+
+.btn-edit,
+.btn-block,
+.btn-delete {
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 0.82rem;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    color: #ffffff;
+}
+
+.btn-edit {
+    background: var(--color-primary);
+}
+.btn-edit:hover {
+    background: var(--color-primary-dark);
+}
+
+.btn-block {
+    background: #f59e0b;
+}
+.btn-block:hover {
+    background: #d97706;
+}
+
+.btn-delete {
+    background: var(--color-error);
+}
+.btn-delete:hover {
+    background: #7f1d1d;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.status-active {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status-blocked {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+/* ── ROLE BADGES (Buyer / Seller indicator) ── */
+.role-badge {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-left: 6px;
+    vertical-align: middle;
+}
+
+.role-buyer {
+    background: #B8E3E9;
+    color: #0B2E33;
+}
+
+.role-seller {
+    background: #0B2E33;
+    color: #B8E3E9;
+}
+
+.role-admin {
+    background: var(--color-primary);
+    color: #ffffff;
+}
+
+@media (max-width: 760px) {
+    .admin-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .header-actions {
+        justify-content: space-between;
+    }
+}
+
+/* ── LANDING PAGE (index.php) ───────────── */
+.landing-card {
+    width: 100%;
+    max-width: 500px;
+    background: var(--color-bg);
+    border-radius: 10px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 10px 28px var(--color-shadow);
+}
+
+.landing-card h1 {
+    color: var(--color-text);
+    margin-bottom: 16px;
+    font-size: 2rem;
+}
+
+.landing-card p {
+    color: #475569;
+    margin-bottom: 24px;
+}
+
+.landing-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.landing-buttons button {
+    flex: 1;
+    min-width: 140px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.landing-buttons .login    { background: var(--color-primary); }
+.landing-buttons .register { background: var(--color-secondary); }
+
+.landing-buttons button:hover {
+    transform: translateY(-2px);
+    opacity: 0.95;
+}
+
+/* ── RESPONSIVE ─────────────────────────── */
+@media (max-width: 768px) {
+    .form-container {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-container,
+    .landing-card {
+        padding: 20px;
+    }
+
+    .form-container h2 {
+        font-size: 1.25rem;
+    }
+
+    .landing-card h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* ── RATING SYSTEM (stars + display) ────── */
+
+/* Static star display (used on myOrders, viewProduct, buying). */
+.static-stars {
+    display: inline-block;
+    letter-spacing: 1px;
+}
+
+.static-stars .star {
+    color: #d1d5db;  /* light grey for empty */
+    font-size: 1rem;
+}
+
+.static-stars .star.filled {
+    color: #f59e0b;  /* amber for filled */
+}
+
+/* Rating text (the "4.2" number and count). */
+.rating-text {
+    color: var(--color-text);
+    font-weight: 700;
+    margin-left: 4px;
+}
+
+.rating-count {
+    color: #6b7280;
+    font-weight: 400;
+    font-size: 0.85rem;
+    margin-left: 2px;
+}
+
+.rating-none {
+    color: #9ca3af;
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* Rating display inside marketplace cards. */
+.card-rating {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.85rem;
+    color: var(--color-text);
+}
+
+.card-rating.none {
+    color: #9ca3af;
+    font-style: italic;
+}
+
+.card-rating .static-stars .star {
+    font-size: 0.9rem;
+}
+
+/* Intro line on the rate-seller form. */
+.rating-intro {
+    color: #475569;
+    margin-bottom: 18px;
+    line-height: 1.5;
+}
+
+/* ── INTERACTIVE STAR INPUT (rateOrder.php) ──
+   JS-powered. Stars are simple <span> elements, laid out
+   naturally left-to-right (1 → 5). The script in rateOrder.php
+   handles hover preview, click-to-lock, and writes the chosen
+   number into a hidden input that gets submitted with the form.
+   ─────────────────────────────────────────── */
+.star-input {
+    display: inline-flex;
+    gap: 6px;
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
+
+.star-btn {
+    font-size: 2.4rem;
+    color: #d1d5db;
+    cursor: pointer;
+    transition: color 0.12s ease, transform 0.12s ease;
+    user-select: none;
+    line-height: 1;
+}
+
+.star-btn:hover {
+    transform: scale(1.1);
+}
+
+.star-btn.filled {
+    color: #f59e0b;
+}
+
+.rating-readout {
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin-top: 4px;
+}
